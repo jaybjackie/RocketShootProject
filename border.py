@@ -83,6 +83,7 @@ class Border:
     def draw(self, painter):
         # use the painter object (a turtle) to draw the border
         """ Draw the border and suppose Width and Height are the same value """
+        painter.penup()
         painter.speed(0)
         painter.setheading(0)
         painter.goto(self.left - (self.width/2)*0.9, self.bottom - (self.height/2)*0.9)
@@ -95,18 +96,20 @@ class Border:
             painter.forward(self.height*0.9)
             painter.left(90)
         painter.hideturtle()
-        painter.pendown()
+        painter.penup()
 
     def show_status(self, painter, player):
         painter.undo()
         msg = f'Score: {self.score}'
         painter.penup()
         painter.goto(-400,275)
-        painter.write(msg + f'lives: {player.lives}', font=("Arial", 16,"normal"))
+        painter.write(msg + f'      lives: {player.lives}', font=("Arial", 16,"normal"))
         
-    def display_gameover(self,painter, player):
+    def display_gameover(self,painter):
+        painter.pendown()
         painter.undo()
-        msg = f'GAME OVER\n{self.score}'
+        msg = f'GAME OVER\nSCORE : {self.score}'
         painter.penup()
-        painter.goto(-20,20)
+        painter.goto(-60,0)
         painter.write(msg, font=("Arial", 20,"normal"))
+        painter.hideturtle()

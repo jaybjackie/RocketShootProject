@@ -4,7 +4,8 @@ from mold import Mold
 class Aircraft(Mold):
     def __init__(self, shape, color, pos) -> None:
         super().__init__(shape, color, pos)
-        self.speed = 5
+        self.shapesize(stretch_wid=1.3, stretch_len= 0.8, outline=None)
+        self.speed = 10
         # limit of player lives
         self.lives = 3
 

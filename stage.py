@@ -21,10 +21,15 @@ class Stage:
         self.__painter.screen.setup(900, 600)
 
         # set display screen
-        self.__painter.forward(0)
-        self.__painter.screen.bgcolor('black')
-        self.__painter.setundobuffer(1)
-        self.__painter.screen.tracer(1)
-        self.__painter.speed(0)
         self.__painter.hideturtle()
         self.__painter.penup()
+        self.__painter.forward(0)
+        # set bg color
+        self.__painter.screen.bgcolor('black')
+        # change background picture
+        self.__painter.screen.bgpic("outer space.gif")
+        # set title
+        self.__painter.screen.title("Rocket Shoot Game")
+        self.__painter.setundobuffer(1)
+        self.__painter.screen.tracer(0)
+        self.__painter.speed(0)

@@ -58,8 +58,8 @@ border.show_status(painter, aircraft)
 aircraft.lives = 3
 
 while True:
+    turtle.update()
     aircraft.move()
-    # enemy.move()
     bullet.move()
     
     for enemy in enemies:
@@ -68,19 +68,27 @@ while True:
         if enemy.xcor() <= -400:
             enemy.goto(390, random.choice(deploy_area))
 
-        # Enemy colided aircraft checking
-        if aircraft.is_collided(enemy):
+        # Aircraft hit by enemy, lives decrease.
+        if enemy.is_collided(aircraft):
+            # Play sound for aircraft is hit.
+            os.system("afplay shipdown.wav&")
             aircraft.lives -= 1
             enemy.goto(390, random.choice(deploy_area))
             border.show_status(painter, aircraft)
 
-        # Bullet colided Enemy checking
+        # Bullet hit enemy, earn points.
         if bullet.is_collided(enemy):
-            border.score += 100
+            # Play sound for collide enemy
+            os.system("afplay falling-hit.wav&")
             enemy.goto(390, random.choice(deploy_area))
+            # Play sound for add points.
+            os.system("afplay pointplus.wav&")
+            border.score += 100
             border.show_status(painter, aircraft)
         
+        # GAMEOVER and display player score, exit by click.
         if aircraft.lives == 0:
-            break
-        
-        ### adding sound, bg, game conditon, scoreboard
+            border.display_gameover(painter)
+            turtle.exitonclick()
+
+        ### added sf, bg.
