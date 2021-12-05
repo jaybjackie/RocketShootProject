@@ -8,6 +8,7 @@ class Aircraft(Mold):
         self.speed = 10
         # limit of player lives
         self.lives = 3
+        self.score = 0
 
     def move(self):
         self.forward(0)

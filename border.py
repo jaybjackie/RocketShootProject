@@ -12,7 +12,7 @@ class Border:
         self.corner = corner
         self.width = width
         self.height = height
-        self.score = 0
+        # self.score = 0
         
     def __repr__(self):
         return (f"Border(corner={self.corner},"
@@ -100,15 +100,15 @@ class Border:
 
     def show_status(self, painter, player):
         painter.undo()
-        msg = f'Score: {self.score}'
+        msg = f'Score: {player.score}'
         painter.penup()
         painter.goto(-400,275)
         painter.write(msg + f'      lives: {player.lives}', font=("Arial", 16,"normal"))
         
-    def display_gameover(self,painter):
+    def display_gameover(self,painter, player):
         painter.pendown()
         painter.undo()
-        msg = f'GAME OVER\nSCORE : {self.score}'
+        msg = f'GAME OVER\nSCORE : {player.score}'
         painter.penup()
         painter.goto(-60,0)
         painter.write(msg, font=("Arial", 20,"normal"))

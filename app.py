@@ -83,12 +83,12 @@ while True:
             enemy.goto(390, random.choice(deploy_area))
             # Play sound for add points.
             os.system("afplay pointplus.wav&")
-            border.score += 100
+            aircraft.score += 100
             border.show_status(painter, aircraft)
         
         # GAMEOVER and display player score, exit by click.
         if aircraft.lives == 0:
-            border.display_gameover(painter)
+            border.display_gameover(painter, aircraft)
             turtle.exitonclick()
 
         ### added sf, bg.
