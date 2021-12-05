@@ -4,10 +4,10 @@ from enemy import Enemy
 from stage import Stage
 from vector import Vector
 from border import Border 
+from leaderboard import Leaderboard
 from turtle import Screen, begin_fill, textinput
 
 import os
-import time
 import random
 import turtle
 
@@ -25,9 +25,7 @@ border = Border(Vector(0, 0), width=STAGE_WIDTH, height=STAGE_HEIGHT)
 stage = Stage()
 # Initialize stage
 stage.init_screen()
-
 painter = turtle
-
 # Initialize Border; Playing area
 border.draw(painter)
 
@@ -38,6 +36,7 @@ color = textinput("What's color would you like to be?", "Enter the color\n(red,g
 # Create objects
 aircraft = Aircraft(shape="triangle",color=color,pos=(init_x, init_y))
 bullet = Bulltes("square", color=color, pos=outside ,player = aircraft)
+leaderboard = Leaderboard(player=aircraft, player_name=player_name)
 
 enemies = []
 for _ in range(ENEMIES_NUM):
@@ -90,5 +89,4 @@ while True:
         if aircraft.lives == 0:
             border.display_gameover(painter, aircraft)
             turtle.exitonclick()
-
-        ### added sf, bg.
+            leaderboard.init_board()
