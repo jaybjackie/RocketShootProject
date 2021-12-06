@@ -68,3 +68,6 @@ class Read:
             # top_rank list contains top 3 players
             top_rank = list(name_score)[:15]
             return top_rank
+
+player1 = Read("defalut", 0)
+player1.insert()
