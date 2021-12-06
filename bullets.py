@@ -1,7 +1,5 @@
-from turtle import shapesize, speed
+from turtle import shapesize
 from mold import Mold
-from aircraft import Aircraft
-import copy
 import os
 
 class Bulltes(Mold):
@@ -16,11 +14,13 @@ class Bulltes(Mold):
     
     def firing(self):
         if self.status == 'ready':
+            # play shooting sound
             os.system("afplay laser-gun-shot.wav&")
             self.goto(self.pilot.position())
             self.status = 'firing'
 
     def move(self):
+        """ Move when Status is firing"""
         if self.status == 'firing':
             self.setx(self.xcor() + self.speed)
             if self.xcor() >= 405:

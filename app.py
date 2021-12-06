@@ -5,7 +5,7 @@ from stage import Stage
 from vector import Vector
 from border import Border 
 from read import Read
-from turtle import Screen, textinput
+from turtle import textinput
 
 import os
 import random
@@ -23,17 +23,21 @@ deploy_area = [208, 156, 104, 52, 0, -52, -104, -156, -208]
 # Initailize display window and border
 border = Border(Vector(0, 0), width=STAGE_WIDTH, height=STAGE_HEIGHT)
 stage = Stage()
+
 # Initialize stage
 stage.init_screen()
 painter = turtle
+
 # Initialize Border; Playing area
 border.draw(painter)
 color_palate = ['red','green','blue','yellow','pink','white']
+
 # User Preferance
 player_name = textinput("What's your name pilot?", "Enter your name:")
 color = textinput("What's color would you like to be?", "Enter the color\n(red,green,blue,yellow,pink,white)")
 if color not in color_palate:
     color = 'red'
+
 # Create objects
 aircraft = Aircraft(shape="triangle",color=color,pos=(init_x, init_y))
 bullet = Bulltes("square", color=color, pos=outside ,player = aircraft)
@@ -57,13 +61,18 @@ border.show_status(painter, aircraft)
 # Player lives
 aircraft.lives = 3
 
+# Game running
 while True:
+    # update frame
     turtle.update()
+
+    # all object on the screen move
     aircraft.move()
     bullet.move()
     
     for enemy in enemies:
         enemy.move()
+
         # Border check for enemies
         if enemy.xcor() <= -400:
             enemy.goto(390, random.choice(deploy_area))
@@ -86,7 +95,7 @@ while True:
             aircraft.score += 100
             border.show_status(painter, aircraft)
         
-        # GAMEOVER and display player score, exit by click.
+        # GAMEOVER and display player score, exit by click or exit button.
         if aircraft.lives == 0:
             # display status
             border.display_gameover(painter, aircraft)

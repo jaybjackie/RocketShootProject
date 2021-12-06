@@ -1,8 +1,7 @@
 import json
 
 class Read:
-    """Store infomation such as name and score into the database"""
-
+    """ Store infomation such as name and score into the database """
     def __init__(self, name, score):
         if not isinstance(name, str):
             raise TypeError ("name must be a string")
@@ -15,7 +14,7 @@ class Read:
         return f"Player(name='{self.name}', score={self.score})"
     
     def insert(self):
-        """Insert name and their score to database"""
+        """ Insert name and their score to database """
         new_data = {
             self.name:{
                 'score':self.score}
@@ -31,19 +30,9 @@ class Read:
             data.update(new_data)
             with open('database.json','w') as data_file:
                 json.dump(data, data_file, indent=4)
-        
-    def read_players(self):
-        """Return all player name and their score"""
-        try:
-            with open('database.json','r') as data_file:
-                data = json.load(data_file)
-        except FileNotFoundError:
-            print("No Data File Found")
-        else:
-            return data
 
     def get_top_three(self):
-        """Return list contain player and score sorted by their score"""
+        """ Return list contain player and score sorted by their score """
         try:
             with open('database.json','r') as data_file:
                 data = json.load(data_file)
@@ -59,15 +48,11 @@ class Read:
             # sort dict by value Decsending Order
             sorted_score = dict()
             sorted_name = sorted(res,key=res.get,reverse=True) 
-            # ex ['emmyrock', 'noobmaster69', 'Alisa701']
+            
             for name in sorted_name:
                 sorted_score[name] = res[name]
-            
-            # convert dict to list to get first 3 player and their score
+            # convert dict to list to get player and their score
             name_score = sorted_score.items()
-            # top_rank list contains top 3 players
-            top_rank = list(name_score)[:15]
-            return top_rank
-
-player1 = Read("defalut", 0)
-player1.insert()
+            # highest score list
+            highest_score = list(name_score)[:15]
+            return highest_score

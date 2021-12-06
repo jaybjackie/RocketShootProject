@@ -10,4 +10,5 @@ class Enemy(Mold):
         self.setheading(180)
 
     def move(self):
+        """ Move in linear direction """
         self.setx(self.xcor() - self.speed)

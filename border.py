@@ -1,6 +1,4 @@
 import copy
-from os import read
-import turtle
 from vector import Vector
 from read import Read
 
@@ -14,7 +12,6 @@ class Border:
         self.corner = corner
         self.width = width
         self.height = height
-        # self.score = 0
         
     def __repr__(self):
         return (f"Border(corner={self.corner},"
@@ -54,7 +51,6 @@ class Border:
             raise ValueError("height must be greater than zero")     
         self.__height = height
     
-
     @property
     def left(self):
         """ Read-Only properties """
@@ -83,8 +79,7 @@ class Border:
         return (self.left, self.right, self.bottom, self.top)
  
     def draw(self, painter):
-        # use the painter object (a turtle) to draw the border
-        """ Draw the border and suppose Width and Height are the same value """
+        """ Draw the border by given width and height """
         painter.penup()
         painter.speed(0)
         painter.setheading(0)
@@ -101,7 +96,7 @@ class Border:
         painter.penup()
 
     def show_status(self, painter, player):
-        """display score and player lives on the screen"""
+        """ Display score and player lives on the screen """
         painter.undo()
         msg = f'Score: {player.score}'
         painter.penup()
@@ -109,7 +104,7 @@ class Border:
         painter.write(msg + f'      lives: {player.lives}', font=("Arial", 16,"normal"))
         
     def display_gameover(self,painter, player):
-        """ display gameover when the game is over"""
+        """ Display gameover when the game is over """
         painter.pendown()
         painter.undo()
         msg = f'GAME OVER\nSCORE : {player.score}'
@@ -121,14 +116,15 @@ class Border:
         painter.hideturtle()
     
     def display_rank(self, painter, player_name, score):
-        """Display player name and their score on the screen"""
+        """ Display player name and their score on the screen """
         pen = Read(name=player_name, score=score)
         # insert player name and score to database
         pen.insert()
         painter.undo()
         painter.goto(0, 70)
         painter.write('Leadership',align='center', font=('Arial', 20,'bold'))
-        top_player = pen.get_top_three() # example [('Hibara', 9900), ('conan', 9000), ('Run', 4000)]
+        # top_player example [('Hibara', 9900), ('conan', 9000), ('Run', 4000)]
+        top_player = pen.get_top_three() 
         for p in range(len(top_player)):
             painter.goto(0, 65-((p+1)*20))
             name, score = top_player[p][0], top_player[p][1] # name and score
