@@ -2,7 +2,7 @@ from turtle import shapesize
 from mold import Mold
 import os
 
-class Bulltes(Mold):
+class Bullets(Mold):
     def __init__(self, shape, color, pos, player) -> None:
         super().__init__(shape, color, pos)
         self.shapesize(stretch_wid = 0.3, stretch_len=0.5, outline= None)

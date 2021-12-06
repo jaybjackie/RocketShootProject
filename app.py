@@ -1,5 +1,5 @@
 from aircraft import Aircraft
-from bullets import Bulltes
+from bullets import Bullets
 from enemy import Enemy
 from stage import Stage
 from vector import Vector
@@ -40,7 +40,7 @@ if color not in color_palate:
 
 # Create objects
 aircraft = Aircraft(shape="triangle",color=color,pos=(init_x, init_y))
-bullet = Bulltes("square", color=color, pos=outside ,player = aircraft)
+bullet = Bullets("square", color=color, pos=outside ,player = aircraft)
 read = Read(name=player_name, score=aircraft.score)
 
 enemies = []
