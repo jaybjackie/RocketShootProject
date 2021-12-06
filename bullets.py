@@ -26,4 +26,3 @@ class Bulltes(Mold):
             if self.xcor() >= 405:
                 self.goto(-800,800)
                 self.status = 'ready'
-    

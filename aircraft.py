@@ -1,7 +1,7 @@
 from mold import Mold
 
 class Aircraft(Mold):
-    """ Player aircraft"""
+    """ Player aircraft """
     def __init__(self, shape, color, pos) -> None:
         super().__init__(shape, color, pos)
         self.shapesize(stretch_wid=1.3, stretch_len= 0.8, outline=None)
@@ -37,6 +37,3 @@ class Aircraft(Mold):
         # Left player border
         if self.xcor() < -400:
             self.setx(-400)
-        
-
-
