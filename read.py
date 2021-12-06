@@ -1,4 +1,5 @@
 import json
+
 class Read:
     """Store infomation such as name and score into the database"""
 
@@ -42,7 +43,7 @@ class Read:
             return data
 
     def get_top_three(self):
-        """Return list of dict contain sorted by their score"""
+        """Return list contain player and score sorted by their score"""
         try:
             with open('database.json','r') as data_file:
                 data = json.load(data_file)
@@ -61,6 +62,9 @@ class Read:
             # ex ['emmyrock', 'noobmaster69', 'Alisa701']
             for name in sorted_name:
                 sorted_score[name] = res[name]
-            return sorted_score
             
-
+            # convert dict to list to get first 3 player and their score
+            name_score = sorted_score.items()
+            # top_rank list contains top 3 players
+            top_rank = list(name_score)[:15]
+            return top_rank

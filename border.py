@@ -1,6 +1,8 @@
 import copy
+from os import read
 import turtle
 from vector import Vector
+from read import Read
 
 class Border:
     """
@@ -99,6 +101,7 @@ class Border:
         painter.penup()
 
     def show_status(self, painter, player):
+        """display score and player lives on the screen"""
         painter.undo()
         msg = f'Score: {player.score}'
         painter.penup()
@@ -106,10 +109,29 @@ class Border:
         painter.write(msg + f'      lives: {player.lives}', font=("Arial", 16,"normal"))
         
     def display_gameover(self,painter, player):
+        """ display gameover when the game is over"""
         painter.pendown()
         painter.undo()
         msg = f'GAME OVER\nSCORE : {player.score}'
         painter.penup()
-        painter.goto(-60,0)
-        painter.write(msg, font=("Arial", 20,"normal"))
+        painter.goto(0, 100)
+        painter.write(msg,align='center', font=("Arial", 22, "bold"))
+        painter.goto(250,-265)
+        painter.write('click to exit or exit button',align='left', font=("Arial", 12, "normal"))
+        painter.hideturtle()
+    
+    def display_rank(self, painter, player_name, score):
+        """Display player name and their score on the screen"""
+        pen = Read(name=player_name, score=score)
+        # insert player name and score to database
+        pen.insert()
+        painter.undo()
+        painter.goto(0, 70)
+        painter.write('Leadership',align='center', font=('Arial', 20,'bold'))
+        top_player = pen.get_top_three() # example [('Hibara', 9900), ('conan', 9000), ('Run', 4000)]
+        for p in range(len(top_player)):
+            painter.goto(0, 65-((p+1)*20))
+            name, score = top_player[p][0], top_player[p][1] # name and score
+            msg = f"{name}      {str(score)}"
+            painter.write(msg,align='center',font=("Arial", 16, "bold"))
         painter.hideturtle()
