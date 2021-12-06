@@ -124,7 +124,7 @@ class Border:
         painter.goto(0, 70)
         painter.write('Leadership',align='center', font=('Arial', 20,'bold'))
         # top_player example [('Hibara', 9900), ('conan', 9000), ('Run', 4000)]
-        top_player = pen.get_top_three() 
+        top_player = pen.get_top() 
         for p in range(len(top_player)):
             painter.goto(0, 65-((p+1)*20))
             name, score = top_player[p][0], top_player[p][1] # name and score

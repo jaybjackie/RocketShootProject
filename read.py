@@ -31,7 +31,7 @@ class Read:
             with open('database.json','w') as data_file:
                 json.dump(data, data_file, indent=4)
 
-    def get_top_three(self):
+    def get_top(self):
         """ Return list contain player and score sorted by their score """
         try:
             with open('database.json','r') as data_file:
