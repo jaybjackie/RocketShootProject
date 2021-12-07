@@ -47,7 +47,7 @@ Class to setting up display window size and background picture.
 #### feature
 setting up the display window.
 
-### 6. `Border`
+### 6. `Border` class
 
 This class are setting up the border which is playing area of this game by given attributes corner, width, height. In this class have methods to show score status, display gameover word and also show leadership scores on the screen by turtle object as a painter.
 
@@ -58,6 +58,11 @@ This class are setting up the border which is playing area of this game by given
 + display_rank() this method writing leadership by player name and thier score on screen. Whose highest score represent at the first lines of leadership section.
 
 
-### Class `read.py`
+### `Read` class
 
 Class Read takes the field of collect player name and score, then insert these information to the database json file to be the record of leadership score.
+
+#### features
++ insert() : insert player name and their score into the database.json file.
++ get_top() : Return list contains player name and thier score in Decsending order from database.json file.
+
