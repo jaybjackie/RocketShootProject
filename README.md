@@ -15,9 +15,10 @@ This Class is the Super class of Python turtle inherit object for the flying obj
 This module requires serveral attributes which are shape to shape the turtle, color to paint the turtle, pos for position of object and private attribute speed to set its speed.
 
 #### features
-  + is_collided(other)-> boolean
+  + is_collided(other) : To check whether objects collided or not.
 
-### 2. Class `aircraft.py`
+
+### 2. `Airplane` class
 
 Aircraft class is the child class of Mold Super class which intialize flying objects.
 This class adding attributes lives and score to represent aircraft lives and its earned from destroyed enemies. 
