@@ -7,7 +7,7 @@ Rocket Shoot Game by Python Turtle Graphic.
 <img width="1292" alt="representpic" src="https://user-images.githubusercontent.com/88821578/144994155-f4585640-fcb6-4cc4-9e62-7f0e3f3809a0.png">
 
 This Project is created to satisfy creator demand. When I was little I'm the fan of 'platypus'
-the game that airplane firing enemy to earn score. So I decide to do this style of game by my own style to become 'Rocket shoot Game'
+the game that airplane firing enemy to earn score. So I decide to do this style of game by my own style to become 'Rocket Shoot Game'
 
 #### brief feature
 Player is play as a aircraft, is allow to move up, down, forward, backward and shoot by keyboard pressing w,a,s,d,and spacebar in ordering.
