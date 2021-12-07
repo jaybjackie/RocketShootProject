@@ -23,6 +23,10 @@ This class adding attributes lives and score to represent aircraft lives and its
 
 This class is child class of Mold class. This class is similar to its parent class. Whose represent enemies in this program.
 
+## 4. Class `bullets.py`
+
+Bullets class is also child class of Mold class. Representing bullets object, with privated attributes status and pilot which use to considering firing or not and whose pilot going to be shooting the bullets.
+
 
 
 
