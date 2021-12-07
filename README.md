@@ -21,6 +21,8 @@ This class adding attributes lives and score to represent aircraft lives and its
 
 ### 3. Class `enemy.py`
 
-This class is child class of Mold
+This class is child class of Mold class. This class is similar to its parent class. Whose represent enemies in this program.
+
+
 
 
