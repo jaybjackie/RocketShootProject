@@ -66,7 +66,7 @@ Class Read takes the field of collect player name and score, then insert these i
 + insert() : insert player name and their score into the database.json file.
 + get_top() : Return list contains player name and thier score in Decsending order from database.json file.
 
-### `Vector`
+### 8. `Vector`
 
 This class is the Datatype class. Define Vector in 2D space.
 
