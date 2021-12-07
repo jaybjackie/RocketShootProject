@@ -80,7 +80,7 @@ while True:
         # Aircraft hit by enemy, lives decrease.
         if enemy.is_collided(aircraft):
             # Play sound for aircraft is hit.
-            os.system("afplay shipdown.wav&")
+            os.system("afplay sfx/shipdown.wav&")
             aircraft.lives -= 1
             enemy.goto(390, random.choice(deploy_area))
             border.show_status(painter, aircraft)
@@ -88,10 +88,10 @@ while True:
         # Bullet hit enemy, earn points.
         if bullet.is_collided(enemy):
             # Play sound for collide enemy
-            os.system("afplay falling-hit.wav&")
+            os.system("afplay sfx/falling-hit.wav&")
             enemy.goto(390, random.choice(deploy_area))
             # Play sound for add points.
-            os.system("afplay pointplus.wav&")
+            os.system("afplay sfx/pointplus.wav&")
             aircraft.score += 100
             border.show_status(painter, aircraft)
         

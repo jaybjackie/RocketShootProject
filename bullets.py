@@ -15,7 +15,7 @@ class Bullets(Mold):
     def firing(self):
         if self.status == 'ready':
             # play shooting sound
-            os.system("afplay laser-gun-shot.wav&")
+            os.system("afplay sfx/laser-gun-shot.wav&")
             self.goto(self.pilot.position())
             self.status = 'firing'
 
