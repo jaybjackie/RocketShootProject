@@ -19,7 +19,8 @@ At the end,there is the leadership scoreboard represent whose hit the highest sc
 
 
 #### special thank you to TokyoEdtech for learning resources.
-https://www.youtube.com/watch?v=Ak1IDnP5IrI&list=PLlEgNdBJEO-muprNCDYiKLZ-Kc3-p8thS
+[a link](https://www.youtube.com/watch?v=Ak1IDnP5IrI&list=PLlEgNdBJEO-muprNCDYiKLZ-Kc3-p8thS)
+
 
 # Class Description
 
