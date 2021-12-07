@@ -7,6 +7,14 @@ Rocket Shoot Game by Python Turtle Graphic.
 This Project is created to satisfy creator demand. When I was little I'm the fan of 'platypus'
 the game that airplane firing enemy to earn score. So I decide to do this style of game by my own style to become 'Rocket shoot Game'
 
+#### brief feature
+Player is play as a aircraft, is allow to move up, down, forward, backward and shoot by keyboard pressing w,a,s,d,and spacebar in ordering.
+Player will receive score once they are destroy enemy the 'turtle' in this game.
+But if player is collided by enemy, they are decreased lives by one.
+Once lives reach 0, Game is Over.
+
+At the end,there is the leadership scoreboard represent whose hit the highest score and the second,third...  respectively.
+
 #### coding on Python version 3.9.7
 #### Not requires any tools or library.
 
