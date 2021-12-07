@@ -9,7 +9,7 @@ class Mold(turtle.Turtle):
         self.goto(pos)
 
     def is_collided(self, other):
-        """ Check colllision of objects by 20 unit on the screen"""
+        """ Check collision of objects by 20 unit on the screen"""
         if (self.xcor() >= other.xcor() - 20 and 
         self.xcor() <= other.xcor() + 20 and
         self.ycor() >= other.ycor() - 20 and

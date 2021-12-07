@@ -12,7 +12,6 @@ class Aircraft(Mold):
 
     def move(self):
         self.forward(0)
-        # print(self.pos())
 
     def move_up(self):
         self.sety(self.ycor() + self.speed)
