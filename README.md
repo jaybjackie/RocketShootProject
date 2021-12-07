@@ -58,11 +58,17 @@ This class are setting up the border which is playing area of this game by given
 + display_rank() this method writing leadership by player name and thier score on screen. Whose highest score represent at the first lines of leadership section.
 
 
-### `Read`
+### 7. `Read`
 
 Class Read takes the field of collect player name and score, then insert these information to the database json file to be the record of leadership score.
 
 #### features
 + insert() : insert player name and their score into the database.json file.
 + get_top() : Return list contains player name and thier score in Decsending order from database.json file.
+
+### `Vector`
+
+This class is the Datatype class. Define Vector in 2D space.
+
+p.s. from week10 assignment
 
