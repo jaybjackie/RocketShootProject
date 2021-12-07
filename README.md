@@ -33,23 +33,30 @@ This class is child class of Mold class. This class is similar to its parent cla
 #### feature
 move() to move in linear direction toward the player.
 
-### 4. Class `bullets.py`
+### 4. `Bullets` class
 
 Bullets class is also child class of Mold class. Representing bullets object, with privated attributes status and pilot which use to considering firing or not and whose pilot going to be shooting the bullets.
 
 #### features
 firing(), move() are cooperate to firing the bullet. The firing() will change status to firing when player activate firing by pressing spacebar if the current status is ready only. move() is move bullets to the outside screen.
 
-### 5. Class `stage.py`
+### 5. `Stage` class
 
 Class to setting up display window size and background picture.
 
 #### feature
 setting up the display window.
 
-### 6. Class `border.py`
+### 6. `Border`
 
 This class are setting up the border which is playing area of this game by given attributes corner, width, height. In this class have methods to show score status, display gameover word and also show leadership scores on the screen by turtle object as a painter.
+
+#### features
++ draw() is method to draw the border on the screen to be specify area of playing.
++ show_status show the player score and lives on the left-top of the window.
++ display_gameover() this method write the word 'GAMEOVER' and player score on the center of the screen
++ display_rank() this method writing leadership by player name and thier score on screen. Whose highest score represent at the first lines of leadership section.
+
 
 ### Class `read.py`
 
