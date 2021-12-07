@@ -37,12 +37,15 @@ move() to move in linear direction toward the player.
 
 Bullets class is also child class of Mold class. Representing bullets object, with privated attributes status and pilot which use to considering firing or not and whose pilot going to be shooting the bullets.
 
-### features
+#### features
 firing(), move() are cooperate to firing the bullet. The firing() will change status to firing when player activate firing by pressing spacebar if the current status is ready only. move() is move bullets to the outside screen.
 
 ### 5. Class `stage.py`
 
 Class to setting up display window size and background picture.
+
+#### feature
+setting up the display window.
 
 ### 6. Class `border.py`
 
