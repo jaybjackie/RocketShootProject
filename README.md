@@ -27,6 +27,10 @@ This class is child class of Mold class. This class is similar to its parent cla
 
 Bullets class is also child class of Mold class. Representing bullets object, with privated attributes status and pilot which use to considering firing or not and whose pilot going to be shooting the bullets.
 
+### 5. Class `stage.py`
+
+Class to setting up display window size and background picture.
+
 
 
 
