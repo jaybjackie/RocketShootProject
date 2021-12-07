@@ -31,6 +31,8 @@ Bullets class is also child class of Mold class. Representing bullets object, wi
 
 Class to setting up display window size and background picture.
 
+### 6. Class `border.py`
 
+This class are setting up the border which is playing area of this game by given attributes corner, width, height. In this class have methods to show score status, display gameover word and also show leadership scores on the screen by turtle object as a painter.
 
 
