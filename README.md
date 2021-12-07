@@ -1,6 +1,8 @@
 # RocketShootProject
 
 Rocket Shoot Game by Python Turtle Graphic.
+#### coding on Python version 3.9.7
+#### Not requires any tools or library.
 
 <img width="1292" alt="representpic" src="https://user-images.githubusercontent.com/88821578/144994155-f4585640-fcb6-4cc4-9e62-7f0e3f3809a0.png">
 
@@ -15,8 +17,7 @@ Once lives reach 0, Game is Over.
 
 At the end,there is the leadership scoreboard represent whose hit the highest score and the second,third...  respectively.
 
-#### coding on Python version 3.9.7
-#### Not requires any tools or library.
+
 
 # Class Description
 
