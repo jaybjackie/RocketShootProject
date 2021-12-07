@@ -11,6 +11,9 @@ Description below Here.
 
 ### 1. Module `mold.py`
 
-This module is the Super class for initialize flying object in this program.
+This module is the Super class of Python turtle inherit object for the flying objects in this program.
+This module requires serveral attributes which are shape to shape the turtle, color to paint the turtle, pos for position of object and private attribute speed to set its speed.
+
+
 
 
