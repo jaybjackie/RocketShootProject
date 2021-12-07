@@ -18,6 +18,8 @@ Once lives reach 0, Game is Over.
 At the end,there is the leadership scoreboard represent whose hit the highest score and the second,third...  respectively.
 
 
+#### special thank you to TokyoEdtech for learing source.
+https://www.youtube.com/watch?v=Ak1IDnP5IrI&list=PLlEgNdBJEO-muprNCDYiKLZ-Kc3-p8thS
 
 # Class Description
 
